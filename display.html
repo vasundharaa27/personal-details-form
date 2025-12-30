@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Submitted Details</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f2f2f2;
+      padding: 30px;
+    }
+    .box {
+      background: white;
+      padding: 20px;
+      max-width: 400px;
+      margin: auto;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    }
+    h2 {
+      text-align: center;
+    }
+    p {
+      margin: 8px 0;
+    }
+  </style>
+</head>
+<body>
+
+<div class="box">
+  <h2>Your Details</h2>
+
+  <p><b>Name:</b> <span id="name"></span></p>
+  <p><b>DOB:</b> <span id="dob"></span></p>
+  <p><b>Username:</b> <span id="username"></span></p>
+  <p><b>Email:</b> <span id="email"></span></p>
+  <p><b>Gender:</b> <span id="gender"></span></p>
+  <p><b>Phone Number:</b> <span id="phone"></span></p>
+  <p><b>Country:</b> <span id="country"></span></p>
+  <p><b>State:</b> <span id="state"></span></p>
+  <p><b>District:</b> <span id="district"></span></p>
+  <p><b>City:</b> <span id="city"></span></p>
+  <p><b>Degree:</b> <span id="degree"></span></p>
+</div>
+
+<script>
+  const data = new URLSearchParams(window.location.search);
+
+  document.getElementById("name").textContent = data.get("name");
+  document.getElementById("dob").textContent = data.get("dob");
+  document.getElementById("username").textContent = data.get("username");
+  document.getElementById("email").textContent = data.get("email");
+  document.getElementById("gender").textContent = data.get("gender");
+  document.getElementById("phone").textContent = data.get("phone");
+  document.getElementById("country").textContent = data.get("country");
+  document.getElementById("state").textContent = data.get("state");
+  document.getElementById("district").textContent = data.get("district");
+  document.getElementById("city").textContent = data.get("city");
+  document.getElementById("degree").textContent = data.get("degree");
+</script>
+
+</body>
+</html>
